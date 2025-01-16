@@ -408,7 +408,7 @@ print(calc(7, 9))
 from decimal import Decimal
 
 number = Decimal('1.45')
-print(number.quantiz(Decimal('1.0'), rounding=ROUND_DOWN))
+print(number.quantize(Decimal('1.0'), rounding=ROUND_DOWN))
 
 
 # *********************************** List Comprehensions ***********************************
