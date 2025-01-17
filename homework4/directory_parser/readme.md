@@ -45,17 +45,11 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Перейдіть на рівень головного файлу домашнього завдання
-
-```
-cd homework4
-```
-
 Виконайте тестування консольної команди наведеними способами
 
 ```
 python3 main.py .
-python3 main.py ../homework3
+python3 main.py ../bot
 python3 main.py salary_file.txt
 python3 main.py test
 ```

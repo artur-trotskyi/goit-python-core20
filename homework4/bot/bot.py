@@ -6,19 +6,23 @@ def parse_input(user_input):
     return cmd, *args
 
 
-def add_contact(args, contacts: dict[str, str]) -> str | bool:
+def add_contact(args, contacts: dict[str, str]) -> str:
     if len(args) != 2:
-        return False
+        return 'Invalid command.'
     name, phone = args
     contacts[name] = phone
-    return contacts[name]
+    return "Contact added."
 
 
-def change_contact(args, contacts: dict[str, str]) -> bool:
+def change_contact(args, contacts: dict[str, str]) -> str:
     if len(args) != 2:
-        return False
+        return 'Invalid command.'
     name, phone = args
-    return contacts.update({name: phone}) or True if name in contacts else False
+    is_changed = False
+    if name in contacts:
+        contacts.update({name: phone})
+        is_changed = True
+    return "Contact updated." if is_changed else "Contact not found."
 
 
 def get_contact(name: str, contacts: dict[str, str]) -> dict[str, str]:
@@ -42,11 +46,11 @@ def main():
         elif command == "hello":
             print("How can I help you?")
         elif command == "add":
-            is_added = add_contact(args, contacts)
-            print("Contact added.") if is_added else print("Invalid command.")
+            added_result = add_contact(args, contacts)
+            print(added_result)
         elif command == "change":
-            is_changed = change_contact(args, contacts)
-            print("Contact updated.") if is_changed else print("Contact not found or Invalid command.")
+            changed_result = change_contact(args, contacts)
+            print(changed_result)
         elif command == "phone" and args:
             contact_name = args[0]
             result = get_contact(contact_name, contacts)

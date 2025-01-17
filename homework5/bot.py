@@ -23,14 +23,14 @@ def input_error(func):
 
 
 @input_error
-def add_contact(args, contacts: dict[str, str]):
+def add_contact(args, contacts: dict[str, str]) -> str:
     name, phone = args
     contacts[name] = phone
     return "Contact added."
 
 
 @input_error
-def change_contact(args, contacts: dict[str, str]):
+def change_contact(args, contacts: dict[str, str]) -> str:
     name, phone = args
     is_changed = False
     if name in contacts:
