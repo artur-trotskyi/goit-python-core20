@@ -54,6 +54,21 @@ if __name__ == "__main__":
     for customer in customers:
         print(customer.email_info())
 
+
+############
+
+class LookUpKeyDict(UserDict):
+    def lookup_key(self, value):
+        keys = []
+        for key in self.data:
+            if self.data[key] == value:
+                keys.append(key)
+        return keys
+
+
+my_dict = LookUpKeyDict({"a": 1, "b": 2, "c": 1, "d": 3})
+my_dict.lookup_key(1)
+
 ###################################################### UserList ######################################################
 
 # UserList - це клас, який дозволяє створювати власні версії списків з додатковими функціями.
@@ -78,6 +93,15 @@ print("Оригінальний список:", my_list)
 my_list.add_if_not_exists(3)  # Не додасться, бо вже існує
 my_list.add_if_not_exists(4)  # Додасться, бо ще не існує
 print("Оновлений список:", my_list)
+
+
+class AmountPaymentList(UserList):
+    def amount_payment(self):
+        sum = 0
+        for value in self.data:
+            if value > 0:
+                sum = sum + value
+        return sum
 
 
 ##################
@@ -317,6 +341,35 @@ else:
 finally:
     # Виконується завжди, незалежно від того, був виняток чи ні
     print("Блок finally завжди виконується.")
+
+###################
+import string
+
+
+class NameTooShortError(Exception):
+    pass
+
+
+class NameStartsFromLowError(Exception):
+    pass
+
+
+def enter_name():
+    name = input("Enter name: ")
+    if len(name) < 3:
+        raise NameTooShortError
+    if name[0] not in string.ascii_uppercase:
+        raise NameStartsFromLowError
+
+
+while True:
+    try:
+        name = enter_name()
+        break
+    except NameTooShortError:
+        print('Name is too short, need more than 3 symbols. Try again.')
+    except NameStartsFromLowError:
+        print('Name should start from capital letter. Try again.')
 
 
 ########################
