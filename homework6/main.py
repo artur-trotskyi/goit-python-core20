@@ -27,18 +27,17 @@ class Record:
         self.phones = []
 
     def __str__(self) -> str:
-        return f"Contact name: {self.name.value}, phones: {'; '.join(p.value for p in self.phones)}"
+        return f"Contact name: {self.name}, phones: {'; '.join(p.value for p in self.phones)}"
 
     def add_phone(self, phone: str) -> None:
         self.phones.append(Phone(phone))
 
     def edit_phone(self, old_phone: str, new_phone: str) -> None:
-        if not (new_phone.isdigit() and len(new_phone) == 10):
-            raise ValueError("Phone number must be exactly 10 digits.")
-
         phone = self.find_phone(old_phone)
         if phone:
-            phone.value = new_phone
+            self.add_phone(new_phone)
+
+            self.remove_phone(old_phone)
             return
         raise ValueError(f"Phone {old_phone} not found.")
 
