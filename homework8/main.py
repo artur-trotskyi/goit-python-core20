@@ -3,6 +3,8 @@ from datetime import datetime, date, timedelta
 from typing import List, Dict, Any, Optional, Tuple
 import pickle
 
+ADDRESSBOOK_FILENAME = "addressbook.pkl"
+
 
 class Field:
     def __init__(self, value: str) -> None:
@@ -256,13 +258,13 @@ def display_upcoming_birthdays(upcoming_birthdays: List[Dict[str, Any]], days: i
         )
 
 
-def save_data(book, filename="addressbook.pkl"):
+def save_data(book, filename=ADDRESSBOOK_FILENAME):
     with open(filename, "wb") as f:
         # noinspection PyTypeChecker
         pickle.dump(book, f)
 
 
-def load_data(filename="addressbook.pkl"):
+def load_data(filename=ADDRESSBOOK_FILENAME):
     try:
         with open(filename, "rb") as f:
             return pickle.load(f)
