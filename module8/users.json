@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Хома Лубенець",
+        "phone_number": "+380 43 004-53-69",
+        "email": "lokhrimenko@example.com",
+        "address": "проспект Дальницька, буд. 4, Яремче, 73332",
+        "birthday": "1994-08-26"
+    },
+    {
+        "name": "Марія Редько",
+        "phone_number": "+380 68 486-22-81",
+        "email": "avreliidzhus@example.net",
+        "address": "проспект Чорноморський 1-й, буд. 0 кв. 15, Суми, 61261",
+        "birthday": "1999-06-30"
+    },
+    {
+        "name": "Ілля Кармалюк",
+        "phone_number": "+380 (79) 631-63-33",
+        "email": "kybkaloprokhir@example.org",
+        "address": "парк Кишинівська, буд. 3 кв. 3, Токмак, 63166",
+        "birthday": "1987-06-12"
+    },
+    {
+        "name": "Гордій Терещук",
+        "phone_number": "540 93 05",
+        "email": "ieshchenkovarvara@example.com",
+        "address": "парк 16-та Лінія 6-й ст. Люстдорфської дороги, буд. 732 кв. 6, Іршава, 33906",
+        "birthday": "1997-02-26"
+    },
+    {
+        "name": "Анастасія Бездітко",
+        "phone_number": "+380 25 774-83-35",
+        "email": "omelianverhun@example.com",
+        "address": "узвіз Джинестрівська, буд. 61, Роздільна, 77790",
+        "birthday": "1989-06-16"
+    },
+    {
+        "name": "Хома Шморгун",
+        "phone_number": "070 035-74-50",
+        "email": "stepandubenko@example.org",
+        "address": "парк Лучиста, буд. 5 кв. 804, Переяслав, 63740",
+        "birthday": "2024-05-22"
+    },
+    {
+        "name": "Демʼян Батюк",
+        "phone_number": "+380 42 064-66-73",
+        "email": "sviatoslavdrozdenko@example.org",
+        "address": "парк Степна, буд. 935 кв. 4, Отаманівка, 41709",
+        "birthday": "1970-05-30"
+    },
+    {
+        "name": "Марина Юхименко",
+        "phone_number": "076 192 18 37",
+        "email": "klavdiia03@example.org",
+        "address": "вулиця Шухевича Романа, буд. 7 кв. 9, Рівне, 24909",
+        "birthday": "1974-08-09"
+    },
+    {
+        "name": "Стець Юстина Павлівна",
+        "phone_number": "+380 90 215 22 21",
+        "email": "hordiihavrylyshyna@example.org",
+        "address": "провулок Прорізна, буд. 838 кв. 2, Ялта, 54564",
+        "birthday": "2010-09-07"
+    },
+    {
+        "name": "Пантелеймон Єфименко",
+        "phone_number": "+380 33 428-86-02",
+        "email": "martyn90@example.com",
+        "address": "вулиця Хутірський, буд. 9, Зоринськ, 80492",
+        "birthday": "2004-10-28"
+    },
+    {
+        "name": "Оксана Яценко",
+        "phone_number": "006 861-44-73",
+        "email": "oryna12@example.org",
+        "address": "парк Миколи Вороного, буд. 50, Мала Виска, 41496",
+        "birthday": "2001-05-12"
+    },
+    {
+        "name": "Орест Вітрук",
+        "phone_number": "+380 (64) 358-08-70",
+        "email": "zhalilomyron@example.org",
+        "address": "провулок Бокаріуса, буд. 35 кв. 89, Білогірськ, 49529",
+        "birthday": "1978-04-02"
+    }
+]
