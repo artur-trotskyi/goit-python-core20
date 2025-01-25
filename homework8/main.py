@@ -64,8 +64,8 @@ class Record:
         if not phone:
             raise ValueError(f"Phone {old_phone} not found.")
 
-        self.remove_phone(old_phone)
         self.add_phone(new_phone)
+        self.remove_phone(old_phone)
 
     def find_phone(self, phone: str) -> Phone | None:
         for i, record_phone in enumerate(self.phones):
